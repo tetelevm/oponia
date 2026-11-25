@@ -15,3 +15,4 @@ class Image(Base):
 
     image: Mapped[str] = mapped_column(Text)
     label: Mapped[str] = mapped_column(String(64))
+    ascii_art: Mapped[str | None] = mapped_column(Text)

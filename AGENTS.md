@@ -30,6 +30,11 @@
 - Keep tests minimal and focused on meaningful behavior and failure cases.
 - Avoid redundant tests and tests that merely repeat the implementation.
 
+## Database migrations
+
+- Create migrations only when the user explicitly requests them. Adding or
+  changing models does not authorize creating migrations.
+
 ## Running the project
 
 - When asked to run the project, follow `docs/launch.md`.

@@ -26,7 +26,7 @@ class Location(DisplayMixin, Base):
     __tablename__ = "game_locations"
     __table_args__ = (
         CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_locations_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_locations_slug_format"
         ),
         CheckConstraint("btrim(name) <> ''", name="ck_locations_name_not_blank"),
         CheckConstraint(

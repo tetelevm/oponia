@@ -44,7 +44,7 @@ class Item(DisplayMixin, StatsMixin, Base):
     __tablename__ = "game_items"
     __table_args__ = (
         CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_items_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_items_slug_format"
         ),
         CheckConstraint("btrim(name) <> ''", name="ck_items_name_not_blank"),
         CheckConstraint("price_coins >= 0", name="ck_items_price_coins"),

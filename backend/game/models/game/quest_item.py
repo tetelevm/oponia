@@ -15,7 +15,7 @@ class QuestItem(DisplayMixin, Base):
     __tablename__ = "game_quest_items"
     __table_args__ = (
         CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_quest_items_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_quest_items_slug_format"
         ),
         CheckConstraint("btrim(name) <> ''", name="ck_quest_items_name_not_blank"),
         CheckConstraint(

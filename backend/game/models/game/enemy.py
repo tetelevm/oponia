@@ -14,7 +14,7 @@ class Enemy(DisplayMixin, StatsMixin, Base):
     __tablename__ = "game_enemies"
     __table_args__ = (
         CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_enemies_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_enemies_slug_format"
         ),
         CheckConstraint("btrim(name) <> ''", name="ck_enemies_name_not_blank"),
     )

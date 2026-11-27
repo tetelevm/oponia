@@ -33,7 +33,7 @@ def upgrade() -> None:
         sa.Column("id", sa.Uuid(), nullable=False),
         sa.CheckConstraint("btrim(name) <> ''", name="ck_enemies_name_not_blank"),
         sa.CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_enemies_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_enemies_slug_format"
         ),
         sa.ForeignKeyConstraint(["icon_id"], ["images.id"], ondelete="SET NULL"),
         sa.ForeignKeyConstraint(["image_id"], ["images.id"], ondelete="SET NULL"),
@@ -85,7 +85,7 @@ def upgrade() -> None:
         sa.CheckConstraint("btrim(name) <> ''", name="ck_items_name_not_blank"),
         sa.CheckConstraint("lifetime > INTERVAL '0 seconds'", name="ck_items_lifetime"),
         sa.CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_items_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_items_slug_format"
         ),
         sa.CheckConstraint("durability >= 0", name="ck_items_durability"),
         sa.CheckConstraint("price_coins >= 0", name="ck_items_price_coins"),
@@ -113,7 +113,7 @@ def upgrade() -> None:
         sa.Column("id", sa.Uuid(), nullable=False),
         sa.CheckConstraint("btrim(name) <> ''", name="ck_locations_name_not_blank"),
         sa.CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_locations_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_locations_slug_format"
         ),
         sa.CheckConstraint(
             "sell_multiplier BETWEEN 0 AND 1", name="ck_locations_sell_multiplier"
@@ -146,7 +146,7 @@ def upgrade() -> None:
             "lifetime > INTERVAL '0 seconds'", name="ck_quest_items_lifetime"
         ),
         sa.CheckConstraint(
-            "slug ~ '^[a-z0-9]+(-[a-z0-9]+)*$'", name="ck_quest_items_slug_format"
+            "slug ~ '^[a-z0-9]+([-_][a-z0-9]+)*$'", name="ck_quest_items_slug_format"
         ),
         sa.ForeignKeyConstraint(["icon_id"], ["images.id"], ondelete="SET NULL"),
         sa.ForeignKeyConstraint(["image_id"], ["images.id"], ondelete="SET NULL"),

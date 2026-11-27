@@ -1,0 +1,66 @@
+- slug: city_0001
+  name: City
+  description: >-
+    Merchants call out from crowded stalls beneath the city walls.
+    Beyond the gates, a dusty road leads into the countryside.
+  sell_multiplier: 0.5
+  outgoing_connections:
+    - target: road_0002
+      order: 0
+      conditions: []
+    - target: river_0005
+      order: 1
+      conditions: []
+
+- slug: road_0002
+  name: Road
+  description: >-
+    Wagon tracks run between the city and a quiet village.
+    A narrow trail branches off toward the forest.
+  sell_multiplier: null
+  outgoing_connections:
+    - target: city_0001
+      order: 0
+      conditions: []
+    - target: village_0003
+      order: 1
+      conditions: []
+    - target: forest_0004
+      order: 2
+      conditions: []
+
+- slug: village_0003
+  name: Village
+  description: >-
+    Small cottages surround a well and a modest trading stall.
+    Smoke rises from the chimneys, carrying the smell of fresh bread.
+  sell_multiplier: 0.2
+  outgoing_connections:
+    - target: road_0002
+      order: 0
+      conditions: []
+    - target: river_0005
+      order: 1
+      conditions: []
+
+- slug: forest_0004
+  name: Forest
+  description: >-
+    Tall trees shade a winding trail covered in fallen leaves.
+    Something rustles in the undergrowth just beyond sight.
+  sell_multiplier: null
+  outgoing_connections:
+    - target: road_0002
+      order: 0
+      conditions: []
+
+- slug: river_0005
+  name: River
+  description: >-
+    Cold water rushes past smooth stones along a steep bank.
+    A footpath follows the stream toward the village.
+  sell_multiplier: null
+  outgoing_connections:
+    - target: village_0003
+      order: 0
+      conditions: []

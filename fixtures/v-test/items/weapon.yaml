@@ -1,0 +1,69 @@
+- slug: club_0001
+  name: Club
+  description: A rough wooden club sturdy enough for a simple fight.
+  type: weapon
+  health: 0
+  damage: 1
+  armor: 0
+  special_effects: {}
+  price_coins: 5
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: village_0003
+      order: 0
+      conditions: []
+
+- slug: knife_0002
+  name: Knife
+  description: A small iron knife with a worn wooden handle.
+  type: weapon
+  health: 0
+  damage: 2
+  armor: 0
+  special_effects: {}
+  price_coins: 15
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: village_0003
+      order: 1
+      conditions: []
+    - location: city_0001
+      order: 1
+      conditions: []
+
+- slug: sword_0003
+  name: Sword
+  description: A plain iron sword with a reliable edge.
+  type: weapon
+  health: 0
+  damage: 3
+  armor: 0
+  special_effects: {}
+  price_coins: 50
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: village_0003
+      order: 2
+      conditions: []
+    - location: city_0001
+      order: 2
+      conditions: []
+
+- slug: steel_sword_0004
+  name: Steel Sword
+  description: A finely balanced steel sword with a sharp blade.
+  type: weapon
+  health: 0
+  damage: 5
+  armor: 0
+  special_effects: {}
+  price_coins: null
+  price_platinum: 1
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 3
+      conditions: []

@@ -1,0 +1,18 @@
+- slug: pants_0014
+  name: Pants
+  description: Tough cloth pants with leather patches covering the knees.
+  type: pants
+  health: 3
+  damage: 0
+  armor: 1
+  special_effects: {}
+  price_coins: 20
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []
+    - location: village_0003
+      order: 0
+      conditions: []

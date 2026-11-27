@@ -1,0 +1,53 @@
+- slug: health_ring_0018
+  name: Health Ring
+  description: A simple copper band holds a small red stone.
+  type: ring
+  health: 2
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 5
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []
+    - location: village_0003
+      order: 0
+      conditions: []
+
+- slug: damage_ring_0019
+  name: Damage Ring
+  description: A dark iron ring bears a tiny engraving of a blade.
+  type: ring
+  health: 0
+  damage: 1
+  armor: 0
+  special_effects: {}
+  price_coins: 7
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 1
+      conditions: []
+    - location: village_0003
+      order: 1
+      conditions: []
+
+- slug: life_ring_0020
+  name: Life Ring
+  description: A silver band is etched with a pattern of intertwining leaves.
+  type: ring
+  health: 3
+  damage: 0
+  armor: 1
+  special_effects: {}
+  price_coins: 20
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 2
+      conditions: []

@@ -1,0 +1,34 @@
+- slug: shield_0008
+  name: Shield
+  description: A sturdy wooden shield reinforced with iron strips.
+  type: secondary_weapon
+  health: 5
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 30
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []
+
+- slug: knife_0009
+  name: Knife
+  description: A short knife light enough to wield in your other hand.
+  type: secondary_weapon
+  health: 0
+  damage: 1
+  armor: 0
+  special_effects: {}
+  price_coins: 15
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 1
+      conditions: []
+    - location: village_0003
+      order: 1
+      conditions: []

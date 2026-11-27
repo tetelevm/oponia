@@ -1,0 +1,50 @@
+- slug: wolf_0001
+  name: Wolf
+  description: A lean wolf prowls the trails in search of an easy meal.
+  health: 8
+  damage: 3
+  armor: 1
+  special_effects: {}
+  location_links:
+    - location: road_0002
+      order: 0
+      conditions: []
+    - location: forest_0004
+      order: 0
+      conditions: []
+
+- slug: boar_0002
+  name: Boar
+  description: A stocky boar guards its patch of forest with sharp tusks.
+  health: 10
+  damage: 4
+  armor: 3
+  special_effects: {}
+  location_links:
+    - location: forest_0004
+      order: 1
+      conditions: []
+
+- slug: troublemaker_0003
+  name: Troublemaker
+  description: A loud villager picks fights with anyone passing through.
+  health: 7
+  damage: 2
+  armor: 2
+  special_effects: {}
+  location_links:
+    - location: village_0003
+      order: 0
+      conditions: []
+
+- slug: mermaid_0004
+  name: Mermaid
+  description: A watchful mermaid lurks beneath the river's rippling surface.
+  health: 6
+  damage: 5
+  armor: 1
+  special_effects: {}
+  location_links:
+    - location: river_0005
+      order: 0
+      conditions: []

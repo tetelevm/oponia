@@ -1,0 +1,34 @@
+- slug: bast_shoes_0005
+  name: Bast Shoes
+  description: Simple shoes woven from bark for everyday travel.
+  type: boots
+  health: 2
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 5
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: village_0003
+      order: 0
+      conditions: []
+    - location: city_0001
+      order: 0
+      conditions: []
+
+- slug: boots_0006
+  name: Boots
+  description: Sturdy leather boots made for long walks on rough roads.
+  type: boots
+  health: 4
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 10
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 1
+      conditions: []

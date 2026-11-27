@@ -1,0 +1,15 @@
+- slug: bracers_0013
+  name: Bracers
+  description: Reinforced leather bracers protect your forearms from stray blows.
+  type: gloves
+  health: 5
+  damage: 0
+  armor: 1
+  special_effects: {}
+  price_coins: 30
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []

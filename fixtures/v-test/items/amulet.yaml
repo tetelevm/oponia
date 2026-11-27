@@ -1,0 +1,53 @@
+- slug: cross_0015
+  name: Cross
+  description: A small copper cross hangs from a plain leather cord.
+  type: amulet
+  health: 1
+  damage: 0
+  armor: 1
+  special_effects: {}
+  price_coins: 10
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []
+    - location: village_0003
+      order: 0
+      conditions: []
+
+- slug: health_amulet_0016
+  name: Health Amulet
+  description: A polished red stone brings warmth to the wearer's chest.
+  type: amulet
+  health: 4
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 30
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 1
+      conditions: []
+    - location: village_0003
+      order: 1
+      conditions: []
+
+- slug: shaman_amulet_0017
+  name: Shaman's Amulet
+  description: Carved bones and dark beads hold a trace of ancient magic.
+  type: amulet
+  health: 5
+  damage: 1
+  armor: 1
+  special_effects: {}
+  price_coins: null
+  price_platinum: 1
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 2
+      conditions: []

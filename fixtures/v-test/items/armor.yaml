@@ -1,0 +1,50 @@
+- slug: jacket_0010
+  name: Jacket
+  description: A thick leather jacket that softens glancing blows.
+  type: armor
+  health: 5
+  damage: 0
+  armor: 0
+  special_effects: {}
+  price_coins: 20
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 0
+      conditions: []
+    - location: village_0003
+      order: 0
+      conditions: []
+
+- slug: chainmail_0011
+  name: Chainmail
+  description: Interlocking iron rings form a flexible layer of protection.
+  type: armor
+  health: 5
+  damage: 0
+  armor: 2
+  special_effects: {}
+  price_coins: 50
+  price_platinum: null
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 1
+      conditions: []
+
+- slug: plate_armor_0012
+  name: Plate Armor
+  description: Heavy steel plates offer solid protection in close combat.
+  type: armor
+  health: 10
+  damage: 0
+  armor: 5
+  special_effects: {}
+  price_coins: null
+  price_platinum: 2
+  quantity: 1
+  location_links:
+    - location: city_0001
+      order: 2
+      conditions: []

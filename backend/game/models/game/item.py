@@ -83,6 +83,7 @@ class ItemLocation(Base):
         UniqueConstraint("item_id", "location_id", name="uq_item_locations_pair"),
     )
 
+    order: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     item_id: Mapped[UUID] = mapped_column(
         ForeignKey("game_items.id", ondelete="CASCADE")
     )

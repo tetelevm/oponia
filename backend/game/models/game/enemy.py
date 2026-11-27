@@ -1,6 +1,6 @@
 from uuid import UUID
 
-from sqlalchemy import CheckConstraint, ForeignKey, String, UniqueConstraint
+from sqlalchemy import CheckConstraint, ForeignKey, Integer, String, UniqueConstraint
 from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.ext.mutable import MutableList
 from sqlalchemy.orm import Mapped, mapped_column, relationship
@@ -30,6 +30,7 @@ class EnemyLocation(Base):
         UniqueConstraint("enemy_id", "location_id", name="uq_enemy_locations_pair"),
     )
 
+    order: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     enemy_id: Mapped[UUID] = mapped_column(
         ForeignKey("game_enemies.id", ondelete="CASCADE")
     )

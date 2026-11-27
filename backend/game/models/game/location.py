@@ -5,6 +5,7 @@ from sqlalchemy import (
     CheckConstraint,
     Float,
     ForeignKey,
+    Integer,
     String,
     UniqueConstraint,
 )
@@ -52,12 +53,6 @@ class Location(DisplayMixin, Base):
         cascade="all, delete-orphan",
         passive_deletes=True,
     )
-    incoming_connections: Mapped[list["LocationConnection"]] = relationship(
-        back_populates="target",
-        foreign_keys="LocationConnection.target_id",
-        cascade="all, delete-orphan",
-        passive_deletes=True,
-    )
 
 
 class LocationConnection(Base):
@@ -66,6 +61,7 @@ class LocationConnection(Base):
         UniqueConstraint("source_id", "target_id", name="uq_location_connections_pair"),
     )
 
+    order: Mapped[int] = mapped_column(Integer, default=0, server_default="0")
     source_id: Mapped[UUID] = mapped_column(
         ForeignKey("game_locations.id", ondelete="CASCADE")
     )
@@ -79,6 +75,4 @@ class LocationConnection(Base):
     source: Mapped[Location] = relationship(
         back_populates="outgoing_connections", foreign_keys=[source_id]
     )
-    target: Mapped[Location] = relationship(
-        back_populates="incoming_connections", foreign_keys=[target_id]
-    )
+    target: Mapped[Location] = relationship(foreign_keys=[target_id])

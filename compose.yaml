@@ -17,11 +17,14 @@ services:
       ADMIN_USERNAME: ${ADMIN_USERNAME:-admin}
       ADMIN_PASSWORD: ${ADMIN_PASSWORD:-}
       ADMIN_SECRET_KEY: ${ADMIN_SECRET_KEY:-}
+      MEDIA_ROOT: /var/lib/oponia/media
       REDIS_URL: redis://redis:6379/0
       RABBITMQ_HOST: rabbitmq
       RABBITMQ_PORT: "5672"
       RABBITMQ_USER: ${RABBITMQ_DEFAULT_USER:?Set RABBITMQ_DEFAULT_USER in .env}
       RABBITMQ_PASSWORD: ${RABBITMQ_DEFAULT_PASS:?Set RABBITMQ_DEFAULT_PASS in .env}
+    volumes:
+      - image_uploads:/var/lib/oponia/media/uploads
     depends_on:
       postgres:
         condition: service_healthy
@@ -66,6 +69,7 @@ services:
       dockerfile: deploy/frontend.Dockerfile
     volumes:
       - ./media:/var/lib/oponia/media:ro
+      - image_uploads:/var/lib/oponia/media/uploads:ro
     ports:
       - "127.0.0.1:${WEB_PORT:-8080}:80"
     depends_on:
@@ -130,6 +134,7 @@ services:
     restart: unless-stopped
 
 volumes:
+  image_uploads:
   postgres_data:
   redis_data:
   rabbitmq_data:

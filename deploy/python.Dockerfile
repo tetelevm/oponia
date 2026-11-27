@@ -14,7 +14,8 @@ ARG APP_DIR
 COPY ${APP_DIR}/pyproject.toml ${APP_DIR}/uv.lock ./
 RUN uv sync --locked --no-dev
 
-RUN useradd --system --uid 10001 app
+RUN useradd --system --uid 10001 app \
+    && install -d -o app -g app /var/lib/oponia/media/uploads
 COPY --chown=app:app ${APP_DIR}/ ./
 USER app
 

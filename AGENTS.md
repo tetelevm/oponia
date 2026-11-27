@@ -12,7 +12,7 @@
 - Think through the goal, existing code, and consequences before making changes.
 - Challenge proposals that are incorrect or unnecessarily complicated. Explain
   the concrete issue and suggest a better approach when one is available.
-- Keep changes small and appropriate for this learning project. Prefer clear,
+- Keep changes small and appropriate for this project. Prefer clear,
   straightforward code and avoid abstractions without a current need.
 
 ## Formatting

@@ -13,3 +13,9 @@ dependencies = [
 
 [tool.uv]
 package = false
+
+[dependency-groups]
+dev = [
+    "httpx>=0.29.0",
+    "ipython>=9.19.1",
+]

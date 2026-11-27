@@ -9,6 +9,9 @@ from .base import Image
 
 
 class DisplayMixin:
+    def __str__(self) -> str:
+        return f"{self.name} ({self.slug})"
+
     slug: Mapped[str] = mapped_column(String(64), unique=True)
     name: Mapped[str] = mapped_column(String(64))
     description: Mapped[str | None] = mapped_column(Text)

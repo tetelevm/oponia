@@ -22,6 +22,10 @@ from .quest_item import QuestItem
 
 class Character(StatsMixin, Base):
     __tablename__ = "game_characters"
+
+    def __str__(self) -> str:
+        return self.nickname
+
     __table_args__ = (
         CheckConstraint(
             "btrim(nickname) <> ''", name="ck_characters_nickname_not_blank"

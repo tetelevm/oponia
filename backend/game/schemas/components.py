@@ -39,3 +39,9 @@ class LocationSummarySchema(BaseModel):
 
 class LocationSchema(LocationSummarySchema):
     image: ImageRepresentationSchema | None
+
+
+class EnemySummarySchema(BaseModel):
+    name: str
+    slug: str
+    icon: ImageRepresentationSchema | None

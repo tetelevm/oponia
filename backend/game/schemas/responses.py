@@ -2,6 +2,7 @@ from pydantic import BaseModel
 
 from .components import (
     CharacterSummarySchema,
+    EnemySummarySchema,
     ImageRepresentationSchema,
     LocationSchema,
     LocationSummarySchema,
@@ -25,3 +26,12 @@ class CurrentCharacterSchema(BaseResponseSchema):
     experience: int
     fame: int
     image: ImageRepresentationSchema | None
+
+
+class EnemiesResponseSchema(BaseResponseSchema):
+    enemies: list[EnemySummarySchema]
+
+
+class EnemyResponseSchema(EnemySummarySchema, BaseResponseSchema):
+    image: ImageRepresentationSchema | None
+    stats: StatsSchema

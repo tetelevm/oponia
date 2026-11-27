@@ -15,10 +15,17 @@ class DisplayMixin:
     image_id: Mapped[UUID | None] = mapped_column(
         ForeignKey("images.id", ondelete="SET NULL"), index=True
     )
+    icon_id: Mapped[UUID | None] = mapped_column(
+        ForeignKey("images.id", ondelete="SET NULL"), index=True
+    )
 
     @declared_attr
     def image(cls) -> Mapped[Image | None]:
-        return relationship()
+        return relationship(foreign_keys=[cls.image_id])
+
+    @declared_attr
+    def icon(cls) -> Mapped[Image | None]:
+        return relationship(foreign_keys=[cls.icon_id])
 
 
 class StatsMixin:

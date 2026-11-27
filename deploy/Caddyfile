@@ -1,0 +1,24 @@
+:80 {
+	redir /api /api/ 308
+	redir /media /media/ 308
+
+	handle_path /api/* {
+		reverse_proxy game:8000 {
+			header_up X-Real-IP {remote_host}
+		}
+	}
+
+	handle_path /media/* {
+		@hidden path_regexp (^|/)\.
+		respond @hidden 404
+		header X-Content-Type-Options nosniff
+		root * /var/lib/oponia/media
+		file_server
+	}
+
+	handle {
+		root * /srv
+		try_files {path} /index.html
+		file_server
+	}
+}

@@ -4,8 +4,8 @@ from fastapi import Depends, HTTPException
 from sqlalchemy.orm import Session
 
 from database import get_session
-from models import Character
-from services import characters
+from models import Character, Location
+from services import characters, locations
 
 
 def get_current_character(
@@ -15,3 +15,13 @@ def get_current_character(
     if character is None:
         raise HTTPException(status_code=404, detail="Character not found")
     return character
+
+
+def get_current_location(
+    session: Annotated[Session, Depends(get_session)],
+    character: Annotated[Character, Depends(get_current_character)],
+) -> Location:
+    location = locations.get_current_location(session, character.id)
+    if location is None:
+        raise HTTPException(status_code=404, detail="Character not found")
+    return location

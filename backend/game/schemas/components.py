@@ -1,4 +1,5 @@
 from enum import StrEnum
+from typing import Any
 
 from pydantic import BaseModel, ConfigDict
 
@@ -10,6 +11,15 @@ class CharacterSummarySchema(BaseModel):
     nickname: str
     coins: int
     platinum: int
+
+
+class StatsSchema(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    health: int
+    damage: int
+    armor: int
+    special_effects: dict[str, Any]
 
 
 class ImageFormat(StrEnum):
@@ -29,4 +39,3 @@ class LocationSummarySchema(BaseModel):
 
 class LocationSchema(LocationSummarySchema):
     image: ImageRepresentationSchema | None
-

@@ -1,11 +1,11 @@
 from typing import Annotated
 
-from fastapi import APIRouter, Depends, HTTPException
+from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
 
 from database import get_session
-from dependencies import get_current_character
-from models import Character
+from dependencies import get_current_character, get_current_location
+from models import Character, Location
 from schemas.components import (
     CharacterSummarySchema,
     ImageFormat,
@@ -25,17 +25,13 @@ router = APIRouter(tags=["locations"])
     response_model=CurrentLocationSchema,
     responses={404: {"description": "Character not found"}},
 )
-def get_current_location(
+def read_current_location(
     session: Annotated[Session, Depends(get_session)],
     character: Annotated[Character, Depends(get_current_character)],
+    location: Annotated[Location, Depends(get_current_location)],
     image_format: ImageFormat = ImageFormat.URL,
 ) -> CurrentLocationSchema:
-    location = locations.get_current_location(session, character.id)
-    if location is None:
-        raise HTTPException(status_code=404, detail="Character not found")
-
-    available = locations.get_available_locations(session, location.id)
-
+    available_locations = locations.get_available_locations(session, location.id)
     return CurrentLocationSchema(
         character=CharacterSummarySchema.model_validate(character),
         location=LocationSchema(
@@ -50,6 +46,6 @@ def get_current_location(
                 slug=destination.slug,
                 name=destination.name,
             )
-            for destination in available
+            for destination in available_locations
         ],
     )

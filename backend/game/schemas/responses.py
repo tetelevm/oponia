@@ -1,9 +1,14 @@
+from datetime import timedelta
+
 from pydantic import BaseModel
+
+from models import ItemType
 
 from .components import (
     CharacterSummarySchema,
     EnemySummarySchema,
     ImageRepresentationSchema,
+    ItemSummarySchema,
     LocationSchema,
     LocationSummarySchema,
     StatsSchema,
@@ -35,3 +40,18 @@ class EnemiesResponseSchema(BaseResponseSchema):
 class EnemyResponseSchema(EnemySummarySchema, BaseResponseSchema):
     image: ImageRepresentationSchema | None
     stats: StatsSchema
+
+
+class ShopResponseSchema(BaseResponseSchema):
+    item_types: list[ItemType]
+
+
+class ShopItemsResponseSchema(BaseResponseSchema):
+    items: list[ItemSummarySchema]
+
+
+class ItemResponseSchema(ItemSummarySchema, BaseResponseSchema):
+    image: ImageRepresentationSchema | None
+    stats: StatsSchema
+    lifetime: timedelta | None
+    durability: int | None

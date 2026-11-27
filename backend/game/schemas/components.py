@@ -42,6 +42,15 @@ class LocationSchema(LocationSummarySchema):
 
 
 class EnemySummarySchema(BaseModel):
-    name: str
     slug: str
+    name: str
     icon: ImageRepresentationSchema | None
+
+
+class ItemSummarySchema(BaseModel):
+    slug: str
+    name: str
+    icon: ImageRepresentationSchema | None
+    price_coins: int | None
+    price_platinum: int | None
+    quantity: int

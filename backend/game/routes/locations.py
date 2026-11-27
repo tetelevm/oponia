@@ -5,33 +5,19 @@ from sqlalchemy.orm import Session
 
 from database import get_session
 from dependencies import get_current_character
-from models import Character, Location
-from schemas import (
-    CurrentLocationSchema,
+from models import Character
+from schemas.components import (
+    CharacterSummarySchema,
     ImageFormat,
-    ImageRepresentationSchema,
+    LocationSchema,
     LocationSummarySchema,
 )
+from schemas.responses import CurrentLocationSchema
 from services import locations
 
+from .images import get_image_representation
+
 router = APIRouter(tags=["locations"])
-
-
-def _get_location_image(
-    location: Location, image_format: ImageFormat,
-) -> ImageRepresentationSchema | None:
-    if location.image is None:
-        return None
-
-    image = (
-        location.image.ascii_art
-        if image_format == ImageFormat.ASCII else
-        location.image.image
-    )
-    if image is None:
-        return None
-
-    return ImageRepresentationSchema(format=image_format, value=image)
 
 
 @router.get(
@@ -51,9 +37,12 @@ def get_current_location(
     available = locations.get_available_locations(session, location.id)
 
     return CurrentLocationSchema(
-        slug=location.slug,
-        name=location.name,
-        image=_get_location_image(location, image_format),
+        character=CharacterSummarySchema.model_validate(character),
+        location=LocationSchema(
+            slug=location.slug,
+            name=location.name,
+            image=get_image_representation(location.image, image_format),
+        ),
         description=location.description,
         sell_multiplier=location.sell_multiplier,
         available_locations=[

@@ -1,6 +1,15 @@
 from enum import StrEnum
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
+
+
+class CharacterSummarySchema(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
+
+    level: int
+    nickname: str
+    coins: int
+    platinum: int
 
 
 class ImageFormat(StrEnum):
@@ -21,8 +30,3 @@ class LocationSummarySchema(BaseModel):
 class LocationSchema(LocationSummarySchema):
     image: ImageRepresentationSchema | None
 
-
-class CurrentLocationSchema(LocationSchema):
-    description: str | None
-    sell_multiplier: float | None
-    available_locations: list[LocationSummarySchema]

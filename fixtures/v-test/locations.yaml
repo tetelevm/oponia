@@ -1,5 +1,6 @@
 - slug: city_0001
   name: City
+  image: loc_city
   description: >-
     Merchants call out from crowded stalls beneath the city walls.
     Beyond the gates, a dusty road leads into the countryside.
@@ -14,6 +15,7 @@
 
 - slug: road_0002
   name: Road
+  image: loc_road
   description: >-
     Wagon tracks run between the city and a quiet village.
     A narrow trail branches off toward the forest.
@@ -31,6 +33,7 @@
 
 - slug: village_0003
   name: Village
+  image: loc_village
   description: >-
     Small cottages surround a well and a modest trading stall.
     Smoke rises from the chimneys, carrying the smell of fresh bread.
@@ -45,6 +48,7 @@
 
 - slug: forest_0004
   name: Forest
+  image: loc_forest
   description: >-
     Tall trees shade a winding trail covered in fallen leaves.
     Something rustles in the undergrowth just beyond sight.
@@ -56,6 +60,7 @@
 
 - slug: river_0005
   name: River
+  image: loc_river
   description: >-
     Cold water rushes past smooth stones along a steep bank.
     A footpath follows the stream toward the village.

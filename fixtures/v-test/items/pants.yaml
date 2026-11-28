@@ -1,5 +1,7 @@
 - slug: pants_0014
   name: Pants
+  image: it_pants_pants
+  icon: it_pants_pants
   description: Tough cloth pants with leather patches covering the knees.
   type: pants
   health: 3

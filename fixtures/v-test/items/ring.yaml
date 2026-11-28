@@ -1,5 +1,7 @@
 - slug: health_ring_0018
   name: Health Ring
+  image: it_ring_healthring
+  icon: it_ring_healthring
   description: A simple copper band holds a small red stone.
   type: ring
   health: 2
@@ -19,6 +21,8 @@
 
 - slug: damage_ring_0019
   name: Damage Ring
+  image: it_ring_damagering
+  icon: it_ring_damagering
   description: A dark iron ring bears a tiny engraving of a blade.
   type: ring
   health: 0
@@ -38,6 +42,8 @@
 
 - slug: life_ring_0020
   name: Life Ring
+  image: it_ring_lifering
+  icon: it_ring_lifering
   description: A silver band is etched with a pattern of intertwining leaves.
   type: ring
   health: 3

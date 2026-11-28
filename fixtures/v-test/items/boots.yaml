@@ -1,5 +1,7 @@
 - slug: bast_shoes_0005
   name: Bast Shoes
+  image: it_boots_bastshoes
+  icon: it_boots_bastshoes
   description: Simple shoes woven from bark for everyday travel.
   type: boots
   health: 2
@@ -19,6 +21,8 @@
 
 - slug: boots_0006
   name: Boots
+  image: it_boots_boots
+  icon: it_boots_boots
   description: Sturdy leather boots made for long walks on rough roads.
   type: boots
   health: 4

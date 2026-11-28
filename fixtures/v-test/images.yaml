@@ -1,0 +1,95 @@
+# Image paths are relative to this fixture directory.
+# ASCII rows live in each image directory's ascii.json, keyed by filename stem.
+
+# Locations: ASCII 80 x 20 characters.
+
+- label: City
+  image: images/locations/loc_city.webp
+
+- label: Road
+  image: images/locations/loc_road.webp
+
+- label: Village
+  image: images/locations/loc_village.webp
+
+- label: Forest
+  image: images/locations/loc_forest.webp
+
+- label: River
+  image: images/locations/loc_river.webp
+
+# Enemies: ASCII 25 x 10 characters.
+
+- label: Wolf
+  image: images/enemies/enem_wolf.webp
+
+- label: Boar
+  image: images/enemies/enem_boar.webp
+
+- label: Troublemaker
+  image: images/enemies/enem_troublemaker.webp
+
+- label: Mermaid
+  image: images/enemies/enem_mermaid.webp
+
+# Items: ASCII 8 x 4 characters.
+
+- label: Club
+  image: images/items/it_weap_club.webp
+
+- label: Knife
+  image: images/items/it_weap_knife.webp
+
+- label: Sword
+  image: images/items/it_weap_sword.webp
+
+- label: Steel Sword
+  image: images/items/it_weap_steelsword.webp
+
+- label: Shield
+  image: images/items/it_secweap_shield.webp
+
+- label: Secondary Knife
+  image: images/items/it_secweap_secknife.webp
+
+- label: Cap
+  image: images/items/it_helmet_cap.webp
+
+- label: Jacket
+  image: images/items/it_armor_jacket.webp
+
+- label: Chainmail
+  image: images/items/it_armor_chainmail.webp
+
+- label: Plate Armor
+  image: images/items/it_armor_platearmor.webp
+
+- label: Bracers
+  image: images/items/it_gloves_bracers.webp
+
+- label: Pants
+  image: images/items/it_pants_pants.webp
+
+- label: Bast Shoes
+  image: images/items/it_boots_bastshoes.webp
+
+- label: Boots
+  image: images/items/it_boots_boots.webp
+
+- label: Cross
+  image: images/items/it_amulet_cross.webp
+
+- label: Health Amulet
+  image: images/items/it_amulet_healthamul.webp
+
+- label: Shaman's Amulet
+  image: images/items/it_amulet_shamanamul.webp
+
+- label: Health Ring
+  image: images/items/it_ring_healthring.webp
+
+- label: Damage Ring
+  image: images/items/it_ring_damagering.webp
+
+- label: Life Ring
+  image: images/items/it_ring_lifering.webp

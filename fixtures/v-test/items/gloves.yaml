@@ -1,5 +1,7 @@
 - slug: bracers_0013
   name: Bracers
+  image: it_gloves_bracers
+  icon: it_gloves_bracers
   description: Reinforced leather bracers protect your forearms from stray blows.
   type: gloves
   health: 5

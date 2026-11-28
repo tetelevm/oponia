@@ -1,5 +1,7 @@
 - slug: cap_0007
   name: Cap
+  image: it_helmet_cap
+  icon: it_helmet_cap
   description: A thick cloth cap that keeps the wind off your head.
   type: helmet
   health: 3

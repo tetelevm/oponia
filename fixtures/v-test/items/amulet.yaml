@@ -1,5 +1,7 @@
 - slug: cross_0015
   name: Cross
+  image: it_amulet_cross
+  icon: it_amulet_cross
   description: A small copper cross hangs from a plain leather cord.
   type: amulet
   health: 1
@@ -19,6 +21,8 @@
 
 - slug: health_amulet_0016
   name: Health Amulet
+  image: it_amulet_healthamul
+  icon: it_amulet_healthamul
   description: A polished red stone brings warmth to the wearer's chest.
   type: amulet
   health: 4
@@ -38,6 +42,8 @@
 
 - slug: shaman_amulet_0017
   name: Shaman's Amulet
+  image: it_amulet_shamanamul
+  icon: it_amulet_shamanamul
   description: Carved bones and dark beads hold a trace of ancient magic.
   type: amulet
   health: 5

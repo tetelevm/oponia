@@ -1,5 +1,7 @@
 - slug: jacket_0010
   name: Jacket
+  image: it_armor_jacket
+  icon: it_armor_jacket
   description: A thick leather jacket that softens glancing blows.
   type: armor
   health: 5
@@ -19,6 +21,8 @@
 
 - slug: chainmail_0011
   name: Chainmail
+  image: it_armor_chainmail
+  icon: it_armor_chainmail
   description: Interlocking iron rings form a flexible layer of protection.
   type: armor
   health: 5
@@ -35,6 +39,8 @@
 
 - slug: plate_armor_0012
   name: Plate Armor
+  image: it_armor_platearmor
+  icon: it_armor_platearmor
   description: Heavy steel plates offer solid protection in close combat.
   type: armor
   health: 10

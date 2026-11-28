@@ -1,5 +1,7 @@
 - slug: wolf_0001
   name: Wolf
+  image: enem_wolf
+  icon: enem_wolf
   description: A lean wolf prowls the trails in search of an easy meal.
   health: 8
   damage: 3
@@ -15,6 +17,8 @@
 
 - slug: boar_0002
   name: Boar
+  image: enem_boar
+  icon: enem_boar
   description: A stocky boar guards its patch of forest with sharp tusks.
   health: 10
   damage: 4
@@ -27,6 +31,8 @@
 
 - slug: troublemaker_0003
   name: Troublemaker
+  image: enem_troublemaker
+  icon: enem_troublemaker
   description: A loud villager picks fights with anyone passing through.
   health: 7
   damage: 2
@@ -39,6 +45,8 @@
 
 - slug: mermaid_0004
   name: Mermaid
+  image: enem_mermaid
+  icon: enem_mermaid
   description: A watchful mermaid lurks beneath the river's rippling surface.
   health: 6
   damage: 5

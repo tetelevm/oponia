@@ -1,5 +1,7 @@
 - slug: shield_0008
   name: Shield
+  image: it_secweap_shield
+  icon: it_secweap_shield
   description: A sturdy wooden shield reinforced with iron strips.
   type: secondary_weapon
   health: 5
@@ -16,6 +18,8 @@
 
 - slug: knife_0009
   name: Knife
+  image: it_secweap_secknife
+  icon: it_secweap_secknife
   description: A short knife light enough to wield in your other hand.
   type: secondary_weapon
   health: 0

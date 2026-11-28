@@ -1,5 +1,7 @@
 - slug: club_0001
   name: Club
+  image: it_weap_club
+  icon: it_weap_club
   description: A rough wooden club sturdy enough for a simple fight.
   type: weapon
   health: 0
@@ -16,6 +18,8 @@
 
 - slug: knife_0002
   name: Knife
+  image: it_weap_knife
+  icon: it_weap_knife
   description: A small iron knife with a worn wooden handle.
   type: weapon
   health: 0
@@ -35,6 +39,8 @@
 
 - slug: sword_0003
   name: Sword
+  image: it_weap_sword
+  icon: it_weap_sword
   description: A plain iron sword with a reliable edge.
   type: weapon
   health: 0
@@ -54,6 +60,8 @@
 
 - slug: steel_sword_0004
   name: Steel Sword
+  image: it_weap_steelsword
+  icon: it_weap_steelsword
   description: A finely balanced steel sword with a sharp blade.
   type: weapon
   health: 0

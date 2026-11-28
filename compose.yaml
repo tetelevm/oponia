@@ -25,6 +25,7 @@ services:
       RABBITMQ_PASSWORD: ${RABBITMQ_DEFAULT_PASS:?Set RABBITMQ_DEFAULT_PASS in .env}
     volumes:
       - image_uploads:/var/lib/oponia/media/uploads
+      - ./fixtures:/fixtures:ro
     depends_on:
       postgres:
         condition: service_healthy

@@ -42,14 +42,12 @@ def _validate_image(source: BinaryIO, label: str) -> tuple[bytes, str]:
     return data, extension
 
 
-def create_image(
-    session: Session,
+def save_image_file(
     source: BinaryIO,
     *,
     label: str,
-    ascii_art: str | None = None,
     media_root: Path | None = None,
-) -> Image:
+) -> str:
     data, extension = _validate_image(source, label)
 
     root = media_root if media_root is not None else get_settings().media_root
@@ -62,12 +60,27 @@ def create_image(
         with target:
             target.write(data)
         path.chmod(0o644)
-        record = Image(
-            image=f"/media/uploads/{filename}", label=label, ascii_art=ascii_art,
-        )
+    except Exception:
+        path.unlink(missing_ok=True)
+        raise
+    return f"/media/uploads/{filename}"
+
+
+def create_image(
+    session: Session,
+    source: BinaryIO,
+    *,
+    label: str,
+    ascii_art: str | None = None,
+    media_root: Path | None = None,
+) -> Image:
+    url = save_image_file(source, label=label, media_root=media_root)
+    record = Image(image=url, label=label, ascii_art=ascii_art)
+    try:
         session.add(record)
         session.flush()
     except Exception:
-        path.unlink(missing_ok=True)
+        root = media_root if media_root is not None else get_settings().media_root
+        (root / url.removeprefix("/media/")).unlink(missing_ok=True)
         raise
     return record
